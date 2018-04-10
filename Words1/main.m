@@ -11,21 +11,36 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        int infinite = 2;
-        do {
+        while(YES) {
+        
+        printf("Enter a number between 1 and 6\n");
+
+        char integer[255];
+            fgets(integer, 255, stdin);
+
+            
+            
         char inputChars[255];
         printf("Input a string\n");
         fgets(inputChars, 255, stdin);
-        
-        printf("your string is %s\n", inputChars);
-        
-        NSString *inputString = [NSString stringWithUTF8String:inputChars];
-        NSLog(@"Input was %@", inputString);
             
-        } while (infinite < 9);
+            
+            
+        NSString *inputString = [NSString stringWithUTF8String:inputChars];
+            NSLog(@"Your integer was %s", integer);
+        NSLog(@"Yout string was %@", inputString);
+            NSLog(@"Your integer located at %p", &integer);
+        NSLog(@"Your string located at %p", &inputString);
+            
+        }
             
         
         
     }
+    
+
+    
+    
+    
     return 0;
 }
